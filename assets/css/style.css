@@ -1331,10 +1331,6 @@ body .modal-backdrop {
     margin-left: 2px;
 }
 
-.hover-shape-inner {
-    background: radial-gradient(circle, #4a4176 -24%, #1e1f35 40%);
-}
-
 .hover-shape-inner .hover-shape-bg {
     width: 35px;
     height: 100%;
@@ -3599,7 +3595,6 @@ body .gamfi-explore-content .project-item {
 }
 
 .gamfi-footer-section .footer-cta-area {
-    background: radial-gradient(circle, #4a4176 -24%, #1e1f35 40%);
     padding: 70px 0 80px 0;
     position: relative;
     z-index: 9;
