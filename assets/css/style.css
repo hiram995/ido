@@ -388,19 +388,19 @@ body .modal-backdrop {
     width: 252px;
     height: 100%;
     content: "";
-    background-image: url(../images/bg/header-shape1.png);
+    /* background-image: url(../images/bg/header-shape1.png); */
     position: absolute;
     top: 0;
     background-repeat: no-repeat;
 }
 
 .gamfi-header-section.default-header:after {
-    background-image: url(../images/bg/header-shape1.png);
+    /* background-image: url(../images/bg/header-shape1.png); */
     left: 0;
 }
 
 .gamfi-header-section.default-header:before {
-    background-image: url(../images/bg/header-shape2.png);
+    /* background-image: url(../images/bg/header-shape2.png); */
     right: 0;
 }
 
@@ -3661,7 +3661,7 @@ body .gamfi-explore-content .project-item {
 }
 
 .gamfi-footer-section .footer-area {
-    background: url(../images/bg/footer-bg.jpg);
+    /* background: url(../images/bg/footer-bg.jpg); */
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -3682,7 +3682,7 @@ body .gamfi-explore-content .project-item {
 
 .gamfi-footer-section .footer-listing .footer-icon-list i {
     color: #fff;
-    background: url(../images/icons/icon-image.png);
+    /* background: url(../images/icons/icon-image.png); */
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -9991,7 +9991,7 @@ ProjectDetails2
 .First_Survivor_CityLeft_Timer{
     width: 345px;
     height: 50px;
-    background: url(../images/project/shapeTimerBg.svg);
+    /* background: url(../images/project/shapeTimerBg.svg); */
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;

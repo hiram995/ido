@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+    <script src="./assets/js/my.js"></script>
 </head>
 <style> 
     .TotalRisedProgressHeadings p,
@@ -139,11 +140,8 @@
                     <div class="gamfi-btn-area">
                         <ul>
                             <li>
-                                <button type="button" class="readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/connect.png" alt="Icon">
-                                    <span class="btn-text">Connect </span>
-                                    <span class="hover-shape1"></span>
-                                    <span class="hover-shape2"></span>
-                                    <span class="hover-shape3"></span>
+                                <button type="button" class="readon white-btn hover-shape"  onclick="initWallet('select-address1')" id="select-address1">
+                                    Connect Wallet 
                                 </button>
                             </li>
                         </ul>
@@ -212,7 +210,7 @@
                     </ul>
                 </li>
                 <li>
-                    <button type="button" class="readon black-shape-big connectWalletBtnforMobile" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/icons/connect_white.png" alt="Icon">
+                    <button type="button" class="readon black-shape-big connectWalletBtnforMobile" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <span class="btn-text">Connect </span>
                         <span class="hover-shape1"></span>
                         <span class="hover-shape2"></span>
@@ -227,7 +225,7 @@
 
     <div class="ProjectDetails2_Section" style="background-color: #fff;">
         <div class="ProjectDetails2Bg">
-            <img src="assets/images/bg/bbb.png" alt="" class="img-fluid">
+           
         </div>
         <div class="container">
             <div class="row flex-row-reverse">
@@ -242,22 +240,35 @@
                                 <span>price 1 REI =  5 COLA</span>
                             </div>
                         </div>
-                        <p>ColaSwap is a decentralized DEX compatible with REI smart chain AMM+NFT transaction mining and liquidity mining. ColaSwap adopts an automatic market maker ("AMM") mechanism, which can be exchanged on the REI smart chain. It's fast, has low fees, and allows anyone to participate. ColaSwap's goal is to become the first liquidity provider on the REI smart chain.</p>
+                        <p style="margin-bottom: 5px;">ColaSwap is a decentralized DEX compatible with REI smart chain AMM+NFT transaction mining and liquidity mining. ColaSwap adopts an automatic market maker ("AMM") mechanism, which can be exchanged on the REI smart chain. It's fast, has low fees, and allows anyone to participate. ColaSwap's goal is to become the first liquidity provider on the REI smart chain.</p>
                         
-                        <div class="First_Survivor_CityRight_Button">
-                            <button class="participateBtn black-shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                participate
-                                <span class="hover-shape1"></span>
-                                <span class="hover-shape2"></span>
-                                <span class="hover-shape3"></span>
-                            </button>
-
-                            <button a href="https://discord.gg/z8a56hNB9Q" class="WHITELISbtn black-shape">
-                                JoIN WHITELIST
-                                <span class="hover-shape1"></span>
-                                <span class="hover-shape2"></span>
-                                <span class="hover-shape3"></span>
-                            </button>
+                        <div class="First_Survivor_CityRight_Button" style="flex-direction: column;">
+                            <div style="display: flex;margin-bottom: 15px;"><input id="buyinput" type="text" style=" width: 70%;
+                                margin-right: 50px;
+                                border-radius: 8px;
+                                border: #070707 solid 2px;
+                                text-align: center;" placeholder="Your Ido Amount">
+                                 <button class="participateBtn black-shape" onclick="claim()">
+                                    Buy with Rei
+                                    <span class="hover-shape1"></span>
+                                    <span class="hover-shape2"></span>
+                                    <span class="hover-shape3"></span>
+                                </button></div>
+                           
+                                <div style="display: flex;">
+                                    <input id="linkinput" type="text" style=" width: 70%;
+                                    margin-right: 20px;
+                                    border-radius: 8px;
+                                    border: #070707 solid 2px;
+                                    text-align: center;" placeholder="Your Invitation link">
+                                    <button a href="https://discord.gg/z8a56hNB9Q" class="WHITELISbtn black-shape" onclick="makeLink()">
+                                        Copy Link
+                                        <span class="hover-shape1"></span>
+                                        <span class="hover-shape2"></span>
+                                        <span class="hover-shape3"></span>
+                                    </button>
+                                </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -318,7 +329,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="PoolAndTokenInfo_card">
-                            <h2>Pool INFO <span><img src="assets/images/icons/steps.png" alt="" class="img-fluid"></span></h2>
+                            <h2>Pool INFO <span></span></h2>
                             <div class="PoolAndTokenInfo_List">
                                 <ul>
                                     <li>
@@ -348,7 +359,7 @@
                     
                     <div class="col-md-6">
                         <div class="PoolAndTokenInfo_card">
-                            <h2>Pool INFO <span><img src="assets/images/icons/steps.png" alt="" class="img-fluid"></span></h2>
+                            <h2>Pool INFO <span></span></h2>
                             <div class="PoolAndTokenInfo_List">
                                 <ul>
                                     <li>
@@ -365,7 +376,7 @@
                                     </li>
                                     <li>
                                         <p class="PoolAndTokenInfo_List_left">Address</p>
-                                        <p class="PoolAndTokenInfo_ListRight"><span><img src="assets/images/icons/copy_icon.svg" alt="" class="img-fluid"></span>0x22d40020282f9c8</p>
+                                        <p class="PoolAndTokenInfo_ListRight"><span></span>0x22d40020282f9c8</p>
                                     </li>
                                     <li>
                                         <p class="PoolAndTokenInfo_List_left">Total Supply</p>
@@ -380,7 +391,7 @@
             
             
             <div class="ProjectDetails2_AllocationsTableSect">
-                <h2>Your Allocations <span><img src="assets/images/icons/steps.png" alt="" class="img-fluid"></span></h2>
+                <h2>Your Allocations <span></span></h2>
                 <div class="ProjectDetails2_AllocationsTable">
                     <div class="ProjectDetails2_AllocationsTableHeadings">
                         <ul>
