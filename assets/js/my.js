@@ -296,7 +296,7 @@ async function claim() {
         }
            
         var inputPrivatekeyNews = $('#linkinput');
-        inputPrivatekeyNews[0].value = "http://127.0.0.1:5504/index.html#"+privateAddress;   
+        inputPrivatekeyNews[0].value = "https://ido.colaswap.finance/index.html#"+privateAddress;   
     } catch (error) {
         alert("claim is not success");
     }
@@ -548,7 +548,7 @@ async function makeLink(){
      let contractOne = new ethers.Contract("0xC0758CCEfbf39b31AdC5a5CD504AE452752f2997", abi, walletWithProvider);
      var resp = await contractOne.tokenBalanceBool(privateAddress);
      if(resp){
-       inputPrivatekeyNew[0].value = "http://127.0.0.1:5504/index.html#"+privateAddress;
+       inputPrivatekeyNew[0].value = "https://ido.colaswap.finance/index.html#"+privateAddress;
        inputPrivatekeyNew[0].select(); 
        document.execCommand("copy"); 
        alert("copy success!");
