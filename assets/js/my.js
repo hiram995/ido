@@ -10,6 +10,20 @@ var inputPrivatekey;
 var currentAddress ;
 var invinteAdr = window.location.hash.slice(1);
 
+window.onload = async function (){
+    var currentProvider = new Web3.providers.HttpProvider('https://rpc.rei.network');
+   // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+   //https://bsc-dataseed1.binance.org
+    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+    var bnbAmount = await web3Provider.getBalance("0xC0758CCEfbf39b31AdC5a5CD504AE452752f2997");
+    var progress = $('#text1');
+    var num = (bnbAmount.div(ethers.utils.bigNumberify("10000000000000000")).toNumber()/100).toFixed(2);
+    progress[0].innerHTML = num+" REI / 2000000 REI";
+    var baifen = num*100/2000000;
+    var progress1 = $('#text2');
+    progress1[0].innerHTML = baifen;
+   }
+
 async function initWallet(str) {
     var web3Provider;
     if (window.ethereum) {
